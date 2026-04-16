@@ -77,7 +77,7 @@ resource "google_compute_backend_service" "backend" {
     google_compute_region_instance_group_manager.mig
   ]
 }
-
+ 
 resource "google_compute_url_map" "url_map" {
   name            = "wp-url-map"
   default_service = google_compute_backend_service.backend.id
